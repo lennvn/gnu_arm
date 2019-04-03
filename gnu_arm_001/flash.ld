@@ -1,33 +1,21 @@
 
 MEMORY
 {
-    rom (rx)        : ORIGIN = 0x00000000, LENGTH = 512K
-    icg (rx)        : ORIGIN = 0x00000400, LENGTH = 32
-    func(rx)        : ORIGIN = 0x00000200, LENGTH = 2K
-    ram (rwx)       : ORIGIN = 0x20000000, LENGTH = 192K
+    rom1        (rx): ORIGIN = 0x00000000, LENGTH = 1024    /* 1K */
+    icg         (rx): ORIGIN = 0x00000400, LENGTH = 32      /* 32Bytes */
+    func        (rx): ORIGIN = 0x00000420, LENGTH = 992     /* 1K - 32Bytes */
+    rom2        (rx): ORIGIN = 0x00000800, LENGTH = 510K
+    ram1       (rwx): ORIGIN = 0x1FFF8000, LENGTH = 188K
+    ram2       (rwx): ORIGIN = 0x200F0000, LENGTH = 4K
 }
 
 SECTIONS
 {
-    . = ORIGIN(rom);
-    .text :
+    . = ORIGIN(rom1);
+    .vectors :
     {
-        *(vectors)
-        *(.text)
-        KEEP(*(.rodata))
-
-        /*. = ORIGIN(func);
-        *(.func_sec)
-
-        . = ORIGIN(icg);
-        KEEP(*(.icg_sec))*/
-    } >rom
-
-    . = ORIGIN(func);
-    .func_sec :
-    {
-        KEEP(*(.func_sec))
-    } >func
+        KEEP(*(.vectors))
+    } >rom1
 
     . = ORIGIN(icg);
     .icg_sec :
@@ -35,15 +23,28 @@ SECTIONS
         KEEP(*(.icg_sec))
     } >icg
 
-    . = ORIGIN(ram);
+    . = ORIGIN(func);
+    .func_sec :
+    {
+        KEEP(*(.func_sec))
+    } >func
+
+    . = ORIGIN(rom2);
+    .text :
+    {
+        *(.text)
+        KEEP(*(.rodata))
+    } >rom2
+
+    . = ORIGIN(ram1);
     .data :
     {
         *(.data)
-    } >ram AT >rom
+    } >ram1 AT >rom2
 
     .bss :
     {
         *(.bss)
-    } >ram AT >rom
+    } >ram1 AT >rom2
 }
 

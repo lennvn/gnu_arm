@@ -10,7 +10,7 @@ LFLAGS  = -Tflash.ld -nostartfiles
 LFLAGS += -Map=main.map
 CPBIN   = -O binary
 CPHEX   = -O ihex
-ODFLAGS = -dS
+ODFLAGS = -D -S -r
 
 all: test
 clean:
