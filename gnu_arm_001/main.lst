@@ -1,0 +1,101 @@
+
+main.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <myvector>:
+   0:	00 00 0c 20 11 00 00 00 45 00 00 00 51 00 00 00     ... ....E...Q...
+
+00000010 <main>:
+static const unsigned int cst_sec2 = 0x22222222;
+
+static unsigned int m_bss_array[5];
+static unsigned int m_data_array[4] = {0x11, 0x22, 0x33, 0x44};
+int main(void)
+{
+  10:	b480      	push	{r7}
+  12:	b083      	sub	sp, #12
+  14:	af00      	add	r7, sp, #0
+    int i = 0;
+  16:	2300      	movs	r3, #0
+  18:	607b      	str	r3, [r7, #4]
+
+    m_bss_array[0] = 1;
+  1a:	4b09      	ldr	r3, [pc, #36]	; (40 <main+0x30>)
+  1c:	2201      	movs	r2, #1
+  1e:	601a      	str	r2, [r3, #0]
+    m_bss_array[1] = 2;
+  20:	4b07      	ldr	r3, [pc, #28]	; (40 <main+0x30>)
+  22:	2202      	movs	r2, #2
+  24:	605a      	str	r2, [r3, #4]
+    m_bss_array[2] = 3;
+  26:	4b06      	ldr	r3, [pc, #24]	; (40 <main+0x30>)
+  28:	2203      	movs	r2, #3
+  2a:	609a      	str	r2, [r3, #8]
+    m_bss_array[3] = 4;
+  2c:	4b04      	ldr	r3, [pc, #16]	; (40 <main+0x30>)
+  2e:	2204      	movs	r2, #4
+  30:	60da      	str	r2, [r3, #12]
+    m_bss_array[4] = 5;
+  32:	4b03      	ldr	r3, [pc, #12]	; (40 <main+0x30>)
+  34:	2205      	movs	r2, #5
+  36:	611a      	str	r2, [r3, #16]
+
+    while (1)
+    {
+        i++;
+  38:	687b      	ldr	r3, [r7, #4]
+  3a:	3301      	adds	r3, #1
+  3c:	607b      	str	r3, [r7, #4]
+  3e:	e7fb      	b.n	38 <main+0x28>
+  40:	20000010 	.word	0x20000010
+
+00000044 <nmi_handler>:
+    }
+}
+
+void nmi_handler(void)
+{
+  44:	b480      	push	{r7}
+  46:	af00      	add	r7, sp, #0
+    return;
+  48:	bf00      	nop
+}
+  4a:	46bd      	mov	sp, r7
+  4c:	bc80      	pop	{r7}
+  4e:	4770      	bx	lr
+
+00000050 <hardfault_handler>:
+
+void hardfault_handler(void)
+{
+  50:	b480      	push	{r7}
+  52:	af00      	add	r7, sp, #0
+    return;
+  54:	bf00      	nop
+}
+  56:	46bd      	mov	sp, r7
+  58:	bc80      	pop	{r7}
+  5a:	4770      	bx	lr
+
+0000005c <cst_sec1>:
+  5c:	1111 1111                                   ....
+
+00000060 <cst_sec2>:
+  60:	2222 2222                                   """"
+
+Disassembly of section .func_sec:
+
+00000200 <delay>:
+
+void LOCATE_FUNC delay(void)
+{
+ 200:	b480      	push	{r7}
+ 202:	af00      	add	r7, sp, #0
+    return;
+ 204:	bf00      	nop
+}
+ 206:	46bd      	mov	sp, r7
+ 208:	bc80      	pop	{r7}
+ 20a:	4770      	bx	lr
