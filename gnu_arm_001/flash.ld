@@ -17,34 +17,35 @@ SECTIONS
         KEEP(*(.vectors))
     } >rom1
 
-    . = ORIGIN(icg);
+    /*. = ORIGIN(icg);*/
     .icg_sec :
     {
         KEEP(*(.icg_sec))
     } >icg
 
-    . = ORIGIN(func);
+    /*. = ORIGIN(func);*/
     .func_sec :
     {
         KEEP(*(.func_sec))
     } >func
 
-    . = ORIGIN(rom2);
+    /*. = ORIGIN(rom2);*/
     .text :
     {
         *(.text)
         KEEP(*(.rodata))
     } >rom2
 
-    . = ORIGIN(ram1);
-    .data :
+    _data_in_rom_start = .;
+
+    .data : AT (_data_in_rom_start)
     {
         *(.data)
-    } >ram1 AT >rom2
+    } >ram1
 
     .bss :
     {
         *(.bss)
-    } >ram1 AT >rom2
+    } >ram1
 }
 

@@ -1,0 +1,54 @@
+
+Symbol table '.symtab' contains 51 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 SECTION LOCAL  DEFAULT    1 
+     2: 00000400     0 SECTION LOCAL  DEFAULT    2 
+     3: 00000800     0 SECTION LOCAL  DEFAULT    3 
+     4: 000008b8     0 SECTION LOCAL  DEFAULT    4 
+     5: 1fff8000     0 SECTION LOCAL  DEFAULT    5 
+     6: 000008d8     0 SECTION LOCAL  DEFAULT    6 
+     7: 1fff8020     0 SECTION LOCAL  DEFAULT    7 
+     8: 20027000     0 SECTION LOCAL  DEFAULT    8 
+     9: 00000000     0 SECTION LOCAL  DEFAULT    9 
+    10: 00000000     0 SECTION LOCAL  DEFAULT   10 
+    11: 00000000     0 SECTION LOCAL  DEFAULT   11 
+    12: 00000000     0 SECTION LOCAL  DEFAULT   12 
+    13: 00000000     0 SECTION LOCAL  DEFAULT   13 
+    14: 00000000     0 SECTION LOCAL  DEFAULT   14 
+    15: 00000000     0 SECTION LOCAL  DEFAULT   15 
+    16: 00000000     0 SECTION LOCAL  DEFAULT   16 
+    17: 00000000     0 FILE    LOCAL  DEFAULT  ABS startup.c
+    18: 00000000     0 NOTYPE  LOCAL  DEFAULT    1 $d
+    19: 00000810     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    20: 0000088c     0 NOTYPE  LOCAL  DEFAULT    3 $d
+    21: 000008a4     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    22: 00000000     0 FILE    LOCAL  DEFAULT  ABS icg.c
+    23: 00000400     0 NOTYPE  LOCAL  DEFAULT    2 $d
+    24: 00000000     0 FILE    LOCAL  DEFAULT  ABS main.c
+    25: 1fff8000     0 NOTYPE  LOCAL  DEFAULT    5 $d
+    26: 1fff8020     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    27: 00000800     0 NOTYPE  LOCAL  DEFAULT    3 $t
+    28: 1fff8020   128 OBJECT  GLOBAL DEFAULT    7 m_bss_array
+    29: 00000811   148 FUNC    GLOBAL DEFAULT    3 low_level_init
+    30: 1fff800c     4 OBJECT  GLOBAL DEFAULT    5 m_var_3
+    31: 1fff8000     4 OBJECT  GLOBAL DEFAULT    5 m_var_0
+    32: 1fff8010     4 OBJECT  GLOBAL DEFAULT    5 m_var_4
+    33: 00000400    32 OBJECT  GLOBAL DEFAULT    2 icg_val
+    34: 000008b8     0 NOTYPE  GLOBAL DEFAULT    4 _data_lma_start_
+    35: 1fff80a0     0 NOTYPE  GLOBAL DEFAULT    8 _heap_start_
+    36: 1fff8000     0 NOTYPE  GLOBAL DEFAULT    5 _data_vma_start_
+    37: 1fff8014     4 OBJECT  GLOBAL DEFAULT    5 m_var_5
+    38: 20027000     0 NOTYPE  GLOBAL DEFAULT    8 _stack_top_
+    39: 1fff8020     0 NOTYPE  GLOBAL DEFAULT    7 _bss_start_
+    40: 1fff80a0     0 NOTYPE  GLOBAL DEFAULT    7 _bss_end_
+    41: 1fff8020     0 NOTYPE  GLOBAL DEFAULT    5 _data_vma_end_
+    42: 00000801    14 FUNC    GLOBAL DEFAULT    3 main
+    43: 1fff8008     4 OBJECT  GLOBAL DEFAULT    5 m_var_2
+    44: 1fff8018     4 OBJECT  GLOBAL DEFAULT    5 m_var_6
+    45: 000008b1     6 FUNC    GLOBAL DEFAULT    3 hardfault_handler
+    46: 000008d8     0 NOTYPE  GLOBAL DEFAULT    6 _data_lma_end_
+    47: 000008a5    12 FUNC    GLOBAL DEFAULT    3 nmi_handler
+    48: 1fff8004     4 OBJECT  GLOBAL DEFAULT    5 m_var_1
+    49: 00000000    16 OBJECT  GLOBAL DEFAULT    1 nvic_vector
+    50: 1fff801c     4 OBJECT  GLOBAL DEFAULT    5 m_var_7

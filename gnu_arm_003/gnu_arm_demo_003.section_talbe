@@ -1,0 +1,29 @@
+There are 20 section headers, starting at offset 0x11f8:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .isr_vector       PROGBITS        00000000 0000d4 000010 00  WA  0   0  4
+  [ 2] .icg_sec          PROGBITS        00000400 0000e4 000020 00   A  0   0  4
+  [ 3] .text             PROGBITS        00000800 000104 0000b8 00  AX  0   0  4
+  [ 4] .data_lma_start   PROGBITS        000008b8 0001dc 000000 00   W  0   0  1
+  [ 5] .data             PROGBITS        1fff8000 0001bc 000020 00  WA  0   0  4
+  [ 6] .data_lma_end     PROGBITS        000008d8 0001dc 000000 00   W  0   0  1
+  [ 7] .bss              NOBITS          1fff8020 0001dc 000080 00  WA  0   0  4
+  [ 8] .stack            PROGBITS        20027000 0001dc 000000 00   W  0   0  1
+  [ 9] .debug_info       PROGBITS        00000000 0001dc 00037f 00      0   0  1
+  [10] .debug_abbrev     PROGBITS        00000000 00055b 000184 00      0   0  1
+  [11] .debug_aranges    PROGBITS        00000000 0006df 000058 00      0   0  1
+  [12] .debug_line       PROGBITS        00000000 000737 0001e3 00      0   0  1
+  [13] .debug_str        PROGBITS        00000000 00091a 000274 01  MS  0   0  1
+  [14] .comment          PROGBITS        00000000 000b8e 00007f 01  MS  0   0  1
+  [15] .ARM.attributes   ARM_ATTRIBUTES  00000000 000c0d 000033 00      0   0  1
+  [16] .debug_frame      PROGBITS        00000000 000c40 00009c 00      0   0  4
+  [17] .symtab           SYMTAB          00000000 000cdc 000330 10     18  28  4
+  [18] .strtab           STRTAB          00000000 00100c 00011f 00      0   0  1
+  [19] .shstrtab         STRTAB          00000000 00112b 0000cc 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  y (purecode), p (processor specific)

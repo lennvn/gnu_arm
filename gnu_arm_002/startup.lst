@@ -1,0 +1,43 @@
+ARM GAS  startup.s 			page 1
+
+
+   1              	
+   2              	    .syntax unified
+   3              	    .cpu cortex-m4
+   4              	    .fpu softvfp
+   5              	    .thumb
+   6              	
+   7              	    .global Default_Handler
+   8              	    .global g_pfnVectors
+   9              	    .global .isr_vector
+  10              	
+  11              	
+  12              	    .section .text.Default_Handler, "ax", %progbits
+  13              	Default_Handler:
+  14              	Infinite_Loop:
+  15 0000 00BF     	    nop
+  16 0002 FDE7     	    b       Infinite_Loop
+  17              	    .size   Default_Handler, .-Default_Handler
+  18              	
+  19              	
+  20              	    .section .isr_vector, "a", %progbits
+  21              	    .type g_pfnVectors, %object
+  22              	    .size g_pfnVectors, .-g_pfnVectors
+  23              	
+  24              	g_pfnVectors:
+  25              	# stack top is 0x20027000
+  26 0000 00700220 	    .word   0x20027000
+  27 0004 00000000 	    .word   main
+  28 0008 00000000 	    .word   Default_Handler
+  29 000c 00000000 	    .word   Default_Handler
+ARM GAS  startup.s 			page 2
+
+
+DEFINED SYMBOLS
+           startup.s:13     .text.Default_Handler:0000000000000000 Default_Handler
+           startup.s:24     .isr_vector:0000000000000000 g_pfnVectors
+           startup.s:14     .text.Default_Handler:0000000000000000 Infinite_Loop
+           startup.s:15     .text.Default_Handler:0000000000000000 $t
+
+UNDEFINED SYMBOLS
+main

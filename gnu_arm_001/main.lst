@@ -218,7 +218,7 @@ Disassembly of section .debug_info:
  124:	0000004c 	andeq	r0, r0, ip, asr #32
  128:	013b9c01 	teqeq	fp, r1, lsl #24
  12c:	690b0000 	stmdbvs	fp, {}	; <UNPREDICTABLE>
- 130:	3b300100 	blcc	c00538 <cst_sec2+0xbffcd0>
+ 130:	3b300100 	blcc	c00538 <_data_in_rom_start+0xbffccc>
  134:	02000001 	andeq	r0, r0, #1
  138:	0c007491 	cfstrseq	mvf7, [r0], {145}	; 0x91
  13c:	6e690504 	cdpvs	5, 6, cr0, cr9, cr4, {0}
@@ -238,38 +238,38 @@ Disassembly of section .debug_abbrev:
   1c:	49002103 	stmdbmi	r0, {r0, r1, r8, sp}
   20:	000b2f13 	andeq	r2, fp, r3, lsl pc
   24:	00240400 	eoreq	r0, r4, r0, lsl #8
-  28:	0b3e0b0b 	bleq	f82c5c <cst_sec2+0xf823f4>
+  28:	0b3e0b0b 	bleq	f82c5c <_data_in_rom_start+0xf823f0>
   2c:	00000e03 	andeq	r0, r0, r3, lsl #28
   30:	49002605 	stmdbmi	r0, {r0, r2, r9, sl, sp}
   34:	06000013 			; <UNDEFINED> instruction: 0x06000013
-  38:	0b0b000f 	bleq	2c007c <cst_sec2+0x2bf814>
+  38:	0b0b000f 	bleq	2c007c <_data_in_rom_start+0x2bf810>
   3c:	00001349 	andeq	r1, r0, r9, asr #6
   40:	03003407 	movweq	r3, #1031	; 0x407
-  44:	3b0b3a0e 	blcc	2ce884 <cst_sec2+0x2ce01c>
+  44:	3b0b3a0e 	blcc	2ce884 <_data_in_rom_start+0x2ce018>
   48:	3f13490b 	svccc	0x0013490b
   4c:	00180219 	andseq	r0, r8, r9, lsl r2
   50:	00340800 	eorseq	r0, r4, r0, lsl #16
-  54:	0b3a0e03 	bleq	e83868 <cst_sec2+0xe83000>
+  54:	0b3a0e03 	bleq	e83868 <_data_in_rom_start+0xe82ffc>
   58:	13490b3b 	movtne	r0, #39739	; 0x9b3b
   5c:	00001802 	andeq	r1, r0, r2, lsl #16
   60:	3f002e09 	svccc	0x00002e09
-  64:	3a0e0319 	bcc	380cd0 <cst_sec2+0x380468>
+  64:	3a0e0319 	bcc	380cd0 <_data_in_rom_start+0x380464>
   68:	270b3b0b 	strcs	r3, [fp, -fp, lsl #22]
   6c:	12011119 	andne	r1, r1, #1073741830	; 0x40000006
   70:	97184006 	ldrls	r4, [r8, -r6]
   74:	00001942 	andeq	r1, r0, r2, asr #18
   78:	3f012e0a 	svccc	0x00012e0a
-  7c:	3a0e0319 	bcc	380ce8 <cst_sec2+0x380480>
+  7c:	3a0e0319 	bcc	380ce8 <_data_in_rom_start+0x38047c>
   80:	270b3b0b 	strcs	r3, [fp, -fp, lsl #22]
   84:	11134919 	tstne	r3, r9, lsl r9
   88:	40061201 	andmi	r1, r6, r1, lsl #4
   8c:	19429718 	stmdbne	r2, {r3, r4, r8, r9, sl, ip, pc}^
   90:	00001301 	andeq	r1, r0, r1, lsl #6
   94:	0300340b 	movweq	r3, #1035	; 0x40b
-  98:	3b0b3a08 	blcc	2ce8c0 <cst_sec2+0x2ce058>
+  98:	3b0b3a08 	blcc	2ce8c0 <_data_in_rom_start+0x2ce054>
   9c:	0213490b 	andseq	r4, r3, #180224	; 0x2c000
   a0:	0c000018 	stceq	0, cr0, [r0], {24}
-  a4:	0b0b0024 	bleq	2c013c <cst_sec2+0x2bf8d4>
+  a4:	0b0b0024 	bleq	2c013c <_data_in_rom_start+0x2bf8d0>
   a8:	08030b3e 	stmdaeq	r3, {r1, r2, r3, r4, r5, r8, r9, fp}
   ac:	Address 0x00000000000000ac is out of bounds.
 
@@ -389,7 +389,7 @@ Disassembly of section .debug_str:
   ec:	6f682f00 	svcvs	0x00682f00
   f0:	772f656d 	strvc	r6, [pc, -sp, ror #10]!
   f4:	2f657a75 	svccs	0x00657a75
-  f8:	6a6f7250 	bvs	1bdca40 <cst_sec2+0x1bdc1d8>
+  f8:	6a6f7250 	bvs	1bdca40 <_data_in_rom_start+0x1bdc1d4>
   fc:	73746365 	cmnvc	r4, #-1811939327	; 0x94000001
  100:	756e672f 	strbvc	r6, [lr, #-1839]!	; 0xfffff8d1
  104:	6d72615f 	ldfvse	f6, [r2, #-380]!	; 0xfffffe84
@@ -401,7 +401,7 @@ Disassembly of section .debug_str:
 Disassembly of section .comment:
 
 00000000 <.comment>:
-   0:	3a434347 	bcc	10d0d24 <cst_sec2+0x10d04bc>
+   0:	3a434347 	bcc	10d0d24 <_data_in_rom_start+0x10d04b8>
    4:	4e472820 	cdpmi	8, 4, cr2, cr7, cr0, {1}
    8:	6f542055 	svcvs	0x00542055
    c:	20736c6f 	rsbscs	r6, r3, pc, ror #24
@@ -422,7 +422,7 @@ Disassembly of section .comment:
   48:	32323630 	eorscc	r3, r2, #48, 12	; 0x3000000
   4c:	65722820 	ldrbvs	r2, [r2, #-2080]!	; 0xfffff7e0
   50:	7361656c 	cmnvc	r1, #108, 10	; 0x1b000000
-  54:	5b202965 	blpl	80a5f0 <cst_sec2+0x809d88>
+  54:	5b202965 	blpl	80a5f0 <_data_in_rom_start+0x809d84>
   58:	2f4d5241 	svccs	0x004d5241
   5c:	65626d65 	strbvs	r6, [r2, #-3429]!	; 0xfffff29b
   60:	64656464 	strbtvs	r6, [r5], #-1124	; 0xfffffb9c
